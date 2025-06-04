@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: kbtvuelo
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/TU_USUARIO/kbtvuelo-gitops.git'
+    targetRevision: HEAD
+    path: app
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
