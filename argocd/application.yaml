@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/TU_USUARIO/kbtvuelo-gitops.git'
+    repoURL: 'https://github.com/JhonUsuga/kbtvuelo-gitops.git'
     targetRevision: HEAD
     path: app
   destination:
@@ -18,3 +18,4 @@ spec:
       selfHeal: true
     syncOptions:
       - CreateNamespace=true
+
